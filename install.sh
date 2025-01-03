@@ -8,15 +8,6 @@ echo "2 - Uninstall SoloDactyl and Docker"
 read -p "Enter your choice: " choice
 
 if [[ $choice -eq 1 ]]; then
-    # Install Docker
-    echo "Installing Docker..."
-    curl -fsSL https://get.docker.com | sudo bash
-    sudo usermod -aG docker $USER
-    sudo systemctl enable docker --now
-
-    # Run Wings installation
-    ./install.sh
-    cd ..
 
     echo "Setting up SoloDactyl Panel..."
     # Install Node.js and dependencies
@@ -41,11 +32,6 @@ if [[ $choice -eq 1 ]]; then
     echo "Installation completed! SoloDactyl Panel is running."
 
 
-    echo "Installing Docker from Solodactyl Wings repository..."
-    # Install Docker from Solodactyl Wings repository
-    git clone https://github.com/Solodactyl/solodactyl-wings.git
-    cd solodactyl-wings
-    npm install
 
 elif [[ $choice -eq 2 ]]; then
     echo "Uninstalling SoloDactyl Panel and Docker..."
