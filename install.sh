@@ -3,8 +3,8 @@
 echo "Welcome to the SoloDactyl Panel Installer!"
 
 echo "Please select an option:"
-echo "1 - Install SoloDactyl and Docker"
-echo "2 - Uninstall SoloDactyl and Docker"
+echo "1 - Install SoloDactyl "
+echo "2 - Uninstall SoloDactyl & Docker "
 read -p "Enter your choice: " choice
 
 if [[ $choice -eq 1 ]]; then
@@ -34,7 +34,7 @@ if [[ $choice -eq 1 ]]; then
 
 
 elif [[ $choice -eq 2 ]]; then
-    echo "Uninstalling SoloDactyl Panel and Docker..."
+    echo "Uninstalling SoloDactyl Panel ..."
     # Remove SoloDactyl panel files
     sudo rm -rf solodactyl-panel
     sudo rm -rf solodactyl-wings
