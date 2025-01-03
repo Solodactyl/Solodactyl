@@ -3,8 +3,8 @@
 echo "Welcome to the SoloDactyl Panel Installer!"
 
 echo "Please select an option:"
-echo "1 - Install SoloDactyl "
-echo "2 - Uninstall SoloDactyl & Docker "
+echo "1 - Install SoloDactyl Panel "
+echo "2 - Uninstall SoloDactyl Panel "
 read -p "Enter your choice: " choice
 
 if [[ $choice -eq 1 ]]; then
@@ -39,10 +39,6 @@ elif [[ $choice -eq 2 ]]; then
     sudo rm -rf solodactyl-panel
     sudo rm -rf solodactyl-wings
 
-    # Uninstall Docker
-    sudo apt-get remove -y docker.io
-    sudo rm -rf /var/lib/docker
-    sudo rm -rf /etc/docker
 
     echo "Uninstallation completed."
 else
